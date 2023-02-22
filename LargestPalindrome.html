@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function largestPalindrom(input) {
+        //string validation checking----------------
+        if (typeof input !== "string") {
+          console.log("Input should be string");
+        } else {
+          // convert string into lower case and split------------
+          input = input.toLowerCase();
+          let words = input.split(" ");
+
+          let palindrom = [" "];
+          for (let i = 0; i < words.length; i++) {
+            let x = JSON.stringify(words[i].split(""));
+            let y = JSON.stringify(words[i].split("").reverse());
+
+            if (x === y) {
+              if (palindrom[0].length < words[i].length) {
+                palindrom[0] = words[i]; //it will replace sprevious element
+              }
+            }
+          }
+          console.log("Largest Palindrome in given string", palindrom);
+        }
+      }
+      // calling function-----------------
+      largestPalindrom("hello mad she is also madam");
+      largestPalindrom(
+        " mahem surerus madam  my nana and tere mama ki mamima are saas"
+      );
+    </script>
+  </body>
+</html>
