@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Q1-Remove Duplicate characters from String.
+      // ------------Algorithm-------------------
+      //  Step 1 - Create a function
+      //  Step 2 - Check if it's not a valid string
+      //  Step 2.1 - Return , Please enter a valid word or character
+      //  Step 3 - Lower case the following string -> AnKiT - ankit
+      //  step 4- split and store in the form of array
+      //  step 5- Iterate a loop and check for repeatation
+      //  step 5.1-If repeat leave it else store in new array
+      //  step 6-join this new array and return
+
+      // Q2-Remove Duplicate characters from array of element and find the count of an elements using set.
+      // ------------Algorithm-------------------
+      //  Step 1 - Create a function
+      //  Step 2 - Check if it's not a  valid input
+      //  Step 2.1 - Return , Please enter a valid input
+      //  Step 3 - find unique element using set.
+      //  step 4- convert this set into array using spread operator.
+      //  step 5- Return that new array(i.e converted set into array)
+      //  step 6- find the count of array element that is length of array nd return
+
+      // Q3-Remove Duplicate characters from array of element using filter.
+      //   ------------Algorithm-------------------
+      //  Step 1 - Create a function
+      //  Step 2 - Check if it's not a  valid input
+      //  Step 2.1 - Return , Please enter a valid input
+      //  Step 3 - find unique element using filter.
+      //  step 4  -Return that filterd array
+
+      // Q4-String reverse without reversing of individual words (Array of elements can be reverse with reverse() method but for string it is won't possible so required to split and then join.
+      // ------------Algorithm-------------------
+      //  Step 1 - Create a function
+      //  Step 2 - Check if it's not a  valid input
+      //  Step 2.1 -Return, Please enter a valid input
+      //  Step 3 - Split given stirng using split("").
+      //  step 4- Reverse that splited string then join using join("").
+      //  step 5- Again split and reverse and join to reverse words index.
+      //  step 6- return result
+      // ----------------------code--------------------------------------------
+      function reverseStringWithoutWordReverse() {
+        var string = "India is my country";
+        let result = string
+          .split("") //split string
+          .reverse() // reverse all elements
+          .join("") // join the string in reverse form
+          .split(" ") // it will separate words
+          .reverse() // reverse words
+          .join(" "); // join word
+        // console.log(result);
+        return result;
+      }
+      console.log(reverseStringWithoutWordReverse());
+      output = "aidnI si ym yrtnuoc";
+    </script>
+  </body>
+</html>
